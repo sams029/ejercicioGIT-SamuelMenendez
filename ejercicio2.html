@@ -1,0 +1,33 @@
+<script>
+
+    function ordenamientoBurbuja() {
+
+        let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true, 1000, 0, null, 'a'];
+        let final = [];
+        let temp;
+
+        console.log(inicio); // Arreglo ingresado
+
+        inicio.forEach(function (valor, indice, array) {
+            if (typeof inicio[indice] === 'number') {
+                final.push(inicio[indice]);
+            }
+        }); 
+
+        // Algoritmo de burbuja
+        for (let i = 1; i < final.length; i++) {
+            for (let j = 0; j < (final.length - i); j++) {
+                if (final[j] < final[j + 1]) {
+                    temp = final[j];
+                    final[j] = final[j + 1];
+                    final[j + 1] = temp;
+                }
+            }
+        }
+
+        console.log(final); // Arreglo ordenado de mayor a menor
+    }
+
+    ordenamientoBurbuja();
+
+</script>
